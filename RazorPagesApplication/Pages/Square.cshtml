@@ -1,0 +1,16 @@
+﻿@page
+@model RazorPagesApplication.Pages.SquareModel
+@{
+}
+
+<form method="post">
+	<label for="base">Base of triangle:</label>
+	<input type="number" id="base" name="BaseTriangle" />
+	<br />
+	<label for="height">Height of triangle:</label>
+	<input type="number" id="height" name="HeightTriangle" />
+	<br />
+	<button type="submit">Calculate Square</button>
+</form>
+
+<h2>@Model.Message</h2>

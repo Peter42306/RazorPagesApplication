@@ -1,0 +1,44 @@
+﻿@page
+@model RazorPagesApplication.Pages.SoundsModel
+@{
+}
+<div>
+	<h2 style="text-align:center">@Model.Message</h2>
+	
+	<p style="text-align:center">
+		<audio id="bass" controls>
+			<source src="~/sounds/ogg/bass.ogg" type="audio/ogg" />
+			<source src="~/sounds/mp3/bass.mp3" type="audio/mp3" />
+		</audio>
+	</p>
+	<p style="text-align:center">
+		<audio id="drums" controls>
+			<source src="~/sounds/ogg/drums.ogg" type="audio/ogg" />
+			<source src="~/sounds/mp3/drums.mp3" type="audio/mp3" />
+		</audio>
+	</p>
+	<p style="text-align:center">
+		<audio id="guitar" controls>
+			<source src="~/sounds/ogg/guitar.ogg" type="audio/ogg" />
+			<source src="~/sounds/mp3/guitar.mp3" type="audio/mp3" />
+		</audio>
+	</p>
+	<p style="text-align:center">
+		<audio id="organ" controls>
+			<source src="~/sounds/ogg/organ.ogg" type="audio/ogg" />
+			<source src="~/sounds/mp3/organ.mp3" type="audio/mp3" />
+		</audio>
+	</p>
+	<p style="text-align:center">
+		<button onclick="playAll()">Play All</button>
+	</p>
+</div>
+
+<script>
+	function playAll() {
+		document.getElementById('bass').play();
+		document.getElementById('drums').play();
+		document.getElementById('guitar').play();
+		document.getElementById('organ').play();
+	}
+</script>

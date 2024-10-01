@@ -1,0 +1,25 @@
+﻿@page
+@model RazorPagesApplication.Pages.UploadFileModel
+
+@{
+	ViewData["Title"] = "Add file";
+}
+
+<h2>Choose file to upload</h2>
+
+<form method="post" enctype="multipart/form-data">
+	<input type="file" name="uploadedFile" />
+	<br />
+	<input type="submit" value="Upload file" />
+</form>
+
+<h3>All files in library</h3>
+
+@foreach(var item in Model.FilesModel)
+{
+	<p>
+		<img src="@Url.Content(item.Path)" style="max-width:100%; height:auto"/>
+	</p>
+}
+
+<img src="/Files/" />
