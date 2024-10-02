@@ -4,8 +4,8 @@ using RazorPagesApplication.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 string? connection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<FileModelContext>(options =>options.UseSqlServer(connection));
 
+builder.Services.AddDbContext<FileModelContext>(options =>options.UseSqlServer(connection));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
